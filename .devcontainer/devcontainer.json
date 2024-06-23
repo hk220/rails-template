@@ -1,0 +1,10 @@
+{
+  "name": "Rails Dev Environment",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "overrideCommand": true,
+  "features": {
+    "ghcr.io/rails/devcontainer/features/activestorage": {}
+  }
+}
