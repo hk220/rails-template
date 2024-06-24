@@ -7,3 +7,24 @@ services:
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity
+    depends_on:
+      - db
+      - redis
+  db:
+    image: mysql:8.4.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: development
+      MYSQL_USER: app
+      MYSQL_PASSWORD: password
+    volumes:
+      - database:/var/lib/mysql
+  redis:
+    image: redis:7.2.5
+  smtp:
+    image: axllent/mailpit:v1.18.7
+    ports:
+      - 8025:8025
+
+volumes:
+  database:

@@ -5,6 +5,7 @@
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "overrideCommand": true,
   "features": {
-    "ghcr.io/rails/devcontainer/features/activestorage": {}
+    "ghcr.io/rails/devcontainer/features/activestorage": {},
+    "ghcr.io/rails/devcontainer/features/mysql-client": {}
   }
 }
